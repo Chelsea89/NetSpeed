@@ -363,8 +363,8 @@ const NetSpeed = new Lang.Class({
 	 * NetSpeed: _speed_to_string
 	 */
 	_speed_to_string: function(amount, digits) {
-		if (amount == 0)
-			return ["0", "B/s"];
+		if (amount < 1)
+			return ["0", "KB/s"];
 		if (digits < 3)
 			digits = 3;
 		amount *= 1000;
